@@ -1,5 +1,5 @@
 # Start with instant-coffee.
-ARG INSTANT_COFFEE_VERSION=0.8.2
+ARG INSTANT_COFFEE_VERSION=0.9.0
 FROM ghcr.io/lukejoshuapark/instant-coffee:${INSTANT_COFFEE_VERSION} AS build
 ARG TARGETARCH
 
@@ -12,5 +12,8 @@ RUN chmod u+x ./install-dotnet.sh && ./install-dotnet.sh && rm ./install-dotnet.
 # Squash everything together.
 FROM scratch
 COPY --from=build / /
-ENV PATH="/root/.dotnet:$PATH"
+ENV PATH="/root/.dotnet:/root/.cargo/bin:/root/go/bin:/usr/local/go/bin:/usr/local/node/bin:$PATH"
+ENV GOROOT="/usr/local/go"
+ENV GOPATH="/root/go"
+ENV CARGO_TARGET_DIR="/target"
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
