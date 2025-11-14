@@ -10,7 +10,7 @@ Both `amd64` and `arm64` images are supported.
 ## Image URL
 
 ```url
-ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.9.0
+ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.9.1
 ```
 
 ## Installed Software
@@ -19,7 +19,7 @@ Everything from the base Instant Coffee image is included, plus:
 
 |Name|Type|Version|
 |----|----|-------|
-|.NET Core|💙 Language/Runtime|8.0|
+|.NET Core|💙 Language/Runtime|10.0|
 
 ## Dev Container Template
 
@@ -28,7 +28,7 @@ Instant Coffee.
 
 ```json
 {
-    "image": "ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.9.0",
+    "image": "ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.9.1",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
     ],

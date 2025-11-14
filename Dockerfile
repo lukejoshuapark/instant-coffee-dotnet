@@ -1,9 +1,9 @@
 # Start with instant-coffee.
-ARG INSTANT_COFFEE_VERSION=0.9.0
+ARG INSTANT_COFFEE_VERSION=0.9.1
 FROM ghcr.io/lukejoshuapark/instant-coffee:${INSTANT_COFFEE_VERSION} AS build
 ARG TARGETARCH
 
-ARG DOTNET_VERSION=8.0
+ARG DOTNET_VERSION=10.0
 
 # Install .NET.
 COPY ./scripts/install-dotnet.sh ./
