@@ -10,7 +10,7 @@ Both `amd64` and `arm64` images are supported.
 ## Image URL
 
 ```url
-ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.10.3
+ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.11.0
 ```
 
 ## Installed Software
@@ -28,7 +28,7 @@ Instant Coffee.
 
 ```json
 {
-    "image": "ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.10.3",
+    "image": "ghcr.io/lukejoshuapark/instant-coffee-dotnet:0.11.0",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
     ],
@@ -40,14 +40,11 @@ Instant Coffee.
                 "golang.go",
                 "hashicorp.terraform",
                 "ms-dotnettools.csdevkit",
-                "ms-python.python",
                 "rust-lang.rust-analyzer",
-                "tamasfe.even-better-toml",
-                "vadimcn.vscode-lldb"
+                "tamasfe.even-better-toml"
             ],
             "settings": {
-                "javascript.preferences.quoteStyle": "double",
-                "typescript.preferences.quoteStyle": "double",
+                "js/ts.preferences.quoteStyle": "double",
                 "editor.tabSize": 4,
                 "editor.insertSpaces": false,
                 "editor.detectIndentation": false,
