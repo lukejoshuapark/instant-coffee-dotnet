@@ -1,5 +1,5 @@
 # Start with instant-coffee.
-ARG INSTANT_COFFEE_VERSION=0.11.0
+ARG INSTANT_COFFEE_VERSION=0.11.1
 FROM ghcr.io/lukejoshuapark/instant-coffee:${INSTANT_COFFEE_VERSION} AS build
 ARG TARGETARCH
 
